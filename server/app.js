@@ -20,6 +20,10 @@ app.use(parser.json());
 
 // Set up our routes
 app.use('/classes', router);
+app.get('/messages', router);
+app.post('/messages', router);
+app.get('/users', router);
+app.post('/users', router);
 
 // Serve the client files
 app.use(express.static(__dirname + '/../client'));
