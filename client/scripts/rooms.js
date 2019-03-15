@@ -24,7 +24,7 @@ var Rooms = {
     var length = Rooms._data.size;
 
     _.chain(messages)
-      .pluck('roomname')
+      .pluck('room_name')
       .uniq()
       .each(room => Rooms._data.add(room));
 

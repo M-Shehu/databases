@@ -1,6 +1,6 @@
 var Parse = {
 
-  server: 'http://127.0.0.1:3000',
+  server: 'http://10.3.32.115:8000',
 
   create: function(type, message, successCB, errorCB = null) {
 

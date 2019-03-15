@@ -4,21 +4,20 @@ USE chat;
 
 /* Create other tables and define schemas for them here! */
 CREATE TABLE rooms (
-  id INT NOT NULL PRIMARY KEY,
-  room_name VARCHAR(50)
+  id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  room_name VARCHAR(50) NOT NULL UNIQUE
 );
 
 CREATE TABLE users (
-  id INT NOT NULL PRIMARY KEY,
-  username VARCHAR(50)
+  id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  username VARCHAR(50) NOT NULL UNIQUE
 );
 
 CREATE TABLE messages (
-  id INT NOT NULL,
+  id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
   messages VARCHAR(200),
   id_Users INT NOT NULL,
   id_Rooms INT NOT NULL,
-  PRIMARY KEY (id),
   FOREIGN KEY (id_Users)
     REFERENCES `users`(`id`)
     ON DELETE CASCADE ON UPDATE CASCADE,
@@ -29,6 +28,6 @@ CREATE TABLE messages (
 
 
 /*  Execute this file from the command line by typing:
- *    mysql -u root < server/schema.sql
+ *    mysql -u student < server/schema.sql
  *  to create the database and the tables.*/
 

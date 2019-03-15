@@ -8,12 +8,14 @@ module.exports = {
           console.log('Error.');
         } else {
           var responseObject = {results: responseArray};
-          callback(null, JSON.stringify(responseObject));
+          callback(null, responseObject);
         }
       });
     }, // a function which produces all the messages
-    post: function () {
-
+    post: function (message) {
+      db.users.post(message.username);
+      db.rooms.post(message.room_name);
+      db.messages.post(message);
     } // a function which can be used to insert a message into the database
   },
 

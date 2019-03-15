@@ -12,7 +12,7 @@ var MessagesView = {
     MessagesView.$chats.html('');
     Messages
       .items()
-      .filter(message => Rooms.isSelected(message.roomname))
+      .filter(message => Rooms.isSelected(message.room_name))
       .each(message => MessagesView.renderMessage(message));
   },
 

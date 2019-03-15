@@ -7,7 +7,8 @@ module.exports = {
         if (err) {
           console.log('Error.');
         } else {
-          res.send(response);
+          // console.log(response);
+          res.send(JSON.stringify(response));
         }
       });
     }, // a function which handles a get request for all messages

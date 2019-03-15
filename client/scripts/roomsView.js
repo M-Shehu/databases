@@ -7,6 +7,7 @@ var RoomsView = {
 
     RoomsView.$select.on('change', RoomsView.handleChange);
     RoomsView.$button.on('click', RoomsView.handleClick);
+    RoomsView.onStartUp();
   },
 
   render: function() {
@@ -25,6 +26,12 @@ var RoomsView = {
 
   handleChange: function(event) {
     Rooms.selected = RoomsView.$select.val();
+    MessagesView.render();
+  },
+
+  onStartUp: () => {
+    console.log($('<option>').first().val());
+    Rooms.selected = $('<option>').first().val();
     MessagesView.render();
   },
 
