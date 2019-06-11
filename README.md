@@ -4,7 +4,7 @@
 A chat room app with emphasis on the database design. This app implements both a NoSQL (MongoDB) and SQL (MySQL) database with respective ORMS.
 
 ## Usage
-Run the following command to run the code in development mode. Don't worry, it runs all necessary scripts in this one command.
+Run the following command to run the code in development mode. It runs all necessary scripts in this one command.
 
 ```sh
 npm run start:dev
